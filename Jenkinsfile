@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('checkout code') {
       steps {
-        git 'https://github.com/alinafe82/jenkins-fcc'
+        git('https://github.com/alinafe82/jenkins-fcc', branch: 'dev')
       }
     }
 
