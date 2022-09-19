@@ -9,7 +9,7 @@ pipeline {
 
     stage('error') {
       parallel {
-        stage('error') {
+        stage('File contents') {
           steps {
             sh 'ls -la'
           }
@@ -21,6 +21,12 @@ pipeline {
           }
         }
 
+      }
+    }
+
+    stage('Docker Build') {
+      steps {
+        sh 'docker build -f curriculum-front/Dockerfile .'
       }
     }
 
