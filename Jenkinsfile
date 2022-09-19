@@ -7,6 +7,12 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh 'ls -la'
+      }
+    }
+
   }
   environment {
     env = 'dev'
